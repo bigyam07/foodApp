@@ -1,0 +1,17 @@
+.cart-container {
+    height:90vh;
+    margin-top: 100px;
+}
+.cart-title {
+    display: flex;
+    width: 100%;
+    gap: 150px;
+    list-style: none;
+}
+.cart-title li:nth-child(2) {
+    flex: 1;
+}
+.cart-details hr{
+    margin-top: 10px;
+    border: 1px solid #bababa; 
+}

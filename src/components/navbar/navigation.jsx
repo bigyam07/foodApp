@@ -1,12 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import { assets } from '../../assets/frontend_assets/assets.js';
 import Login from '../Login/Login.jsx';
 import './navigation.css'
 import { useState } from 'react';
-
 const Navigation = () => {
     const [menu, setMenu] = useState("home");
     const [menuBarStatus, setMenuBarStatus] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
+    let navigate = useNavigate();
     function handleActiveClass(value) {
         setMenu(value);
     }
@@ -26,7 +27,7 @@ const Navigation = () => {
             {showLogin ? <Login showLogin={showLogin} setShowLogin={setShowLogin}/> : <></>}
             <div className='sub-nav-bar'></div>
             <div className="nav-bar">
-                <img className='company-logo' src={assets.logo}></img>
+                <img className='company-logo' src={assets.logo} onClick={() => navigate('/')}></img>
                 <ul className="menu-list">
                     <a href="#"><li onClick={() => handleActiveClass("home")} className={menu == "home" ? "active" : ""}>Home</li></a>
                     <a href="#explore-menu"><li onClick={() => handleActiveClass("menu")} className={menu == "menu" ? "active" : ""}>Menu</li></a>
@@ -36,7 +37,7 @@ const Navigation = () => {
                 <div className="nav-bar-right">
                     <img src={assets.search_icon} alt=""></img>
                     <div className="nav-bar-search">
-                        <img src={assets.basket_icon} alt=""></img>
+                        <img src={assets.basket_icon} alt="" onClick= {() => navigate('/cart')}></img>
                         <div className='dot'></div>
                     </div>
                     <button className="sign-in-button" onClick={() => setShowLogin(true)}>Sign in</button>
