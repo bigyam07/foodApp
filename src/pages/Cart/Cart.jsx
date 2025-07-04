@@ -1,5 +1,5 @@
-import React from 'react'
 import './Cart.css'
+import { assets } from '../../assets/frontend_assets/assets.js'
 const Cart = () => {
   return (
     <div className='cart-container'>
@@ -13,6 +13,16 @@ const Cart = () => {
           <li>Remove</li>
         </ul>
         <hr />
+        <div className="cart-items">
+          <ul className='cart-item-list'>
+            <li><img src="#" alt="" /></li>
+            <li>Greek salt</li>
+            <li>$12</li>
+            <li>2</li>
+            <li>$24</li>
+            <li><img src={assets.cross_icon} alt="" /></li>
+          </ul>
+        </div>
       </div>
       <div className="cart-footer">
         <div className="cart-total ">
@@ -38,7 +48,7 @@ const Cart = () => {
           <p>If you have a promo code, Enter it here</p>
           <div className="promo-code-section">
             <input type="text" alt='' placeholder='promo code'></input>
-            <button class='promo-button'>Submit</button>
+            <button className='promo-button'>Submit</button>
           </div>
         </div>
       </div>
