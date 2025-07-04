@@ -12,6 +12,9 @@
 .cart-title li:nth-child(2) {
     width: 10%;
 }
+.cart-title li:nth-child(1) {
+   width: 8%;
+}
 .cart-details hr {
     margin-top: 10px;
     border: 1px solid #bababa;
@@ -107,4 +110,8 @@ hr {
     align-items: center;
     padding-right: 15px;
     padding-block: 10px;
+}
+#menu-list-image {
+    height: 50px;
+    width: 50px;
 }

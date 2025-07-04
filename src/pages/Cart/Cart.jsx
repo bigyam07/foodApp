@@ -1,5 +1,6 @@
 import './Cart.css'
 import { assets } from '../../assets/frontend_assets/assets.js'
+import { food_list } from '../../assets/frontend_assets/assets.js'
 const Cart = () => {
   return (
     <div className='cart-container'>
@@ -15,7 +16,7 @@ const Cart = () => {
         <hr />
         <div className="cart-items">
           <ul className='cart-item-list'>
-            <li><img src="#" alt="" /></li>
+            <li><img id='menu-list-image' src={food_list[1].image} alt="" /></li>
             <li>Greek salt</li>
             <li>$12</li>
             <li>2</li>
